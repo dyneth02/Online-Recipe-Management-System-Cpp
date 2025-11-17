@@ -1,0 +1,76 @@
+# Project: Recipe Realm
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o User.o PremiumUser.o FreePlanUser.o GuestUser.o Employee.o Admin.o Manager.o RecipeCreator.o Recipe.o PremiumMembership.o Report.o Payment.o BlogPost.o Discount.o Feedback.o Wallet.o
+LINKOBJ  = main.o User.o PremiumUser.o FreePlanUser.o GuestUser.o Employee.o Admin.o Manager.o RecipeCreator.o Recipe.o PremiumMembership.o Report.o Payment.o BlogPost.o Discount.o Feedback.o Wallet.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Recipe Realm.exe"
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+User.o: User.cpp
+	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
+
+PremiumUser.o: PremiumUser.cpp
+	$(CPP) -c PremiumUser.cpp -o PremiumUser.o $(CXXFLAGS)
+
+FreePlanUser.o: FreePlanUser.cpp
+	$(CPP) -c FreePlanUser.cpp -o FreePlanUser.o $(CXXFLAGS)
+
+GuestUser.o: GuestUser.cpp
+	$(CPP) -c GuestUser.cpp -o GuestUser.o $(CXXFLAGS)
+
+Employee.o: Employee.cpp
+	$(CPP) -c Employee.cpp -o Employee.o $(CXXFLAGS)
+
+Admin.o: Admin.cpp
+	$(CPP) -c Admin.cpp -o Admin.o $(CXXFLAGS)
+
+Manager.o: Manager.cpp
+	$(CPP) -c Manager.cpp -o Manager.o $(CXXFLAGS)
+
+RecipeCreator.o: RecipeCreator.cpp
+	$(CPP) -c RecipeCreator.cpp -o RecipeCreator.o $(CXXFLAGS)
+
+Recipe.o: Recipe.cpp
+	$(CPP) -c Recipe.cpp -o Recipe.o $(CXXFLAGS)
+
+PremiumMembership.o: PremiumMembership.cpp
+	$(CPP) -c PremiumMembership.cpp -o PremiumMembership.o $(CXXFLAGS)
+
+Report.o: Report.cpp
+	$(CPP) -c Report.cpp -o Report.o $(CXXFLAGS)
+
+Payment.o: Payment.cpp
+	$(CPP) -c Payment.cpp -o Payment.o $(CXXFLAGS)
+
+BlogPost.o: BlogPost.cpp
+	$(CPP) -c BlogPost.cpp -o BlogPost.o $(CXXFLAGS)
+
+Discount.o: Discount.cpp
+	$(CPP) -c Discount.cpp -o Discount.o $(CXXFLAGS)
+
+Feedback.o: Feedback.cpp
+	$(CPP) -c Feedback.cpp -o Feedback.o $(CXXFLAGS)
+
+Wallet.o: Wallet.cpp
+	$(CPP) -c Wallet.cpp -o Wallet.o $(CXXFLAGS)
